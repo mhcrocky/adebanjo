@@ -1,12 +1,17 @@
 import React, { useEffect } from 'react';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+import { BrowserRouter as Router, Switch } from 'react-router-dom'
 
-//redux stuff
+/* add scss and bootstrap */
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './App.scss';
+
+/* redux stuff */
 import { Provider } from 'react-redux';
 import store from './redux/store';
 import { CheckAuthentication } from './utils/CheckAuthentication';
 import GuestRoute from './utils/GuestRoute';
-import PrivateRoute from './utils/PrivateRoute';
+
+/* main components */
 import Home from './layout/home/index';
 import Login from './layout/Auth/Login';
 import Register from './layout/Auth/Register';
@@ -22,7 +27,7 @@ const App: React.FC = () => {
             <Provider store={store}>
                 <Router>
                     <Switch>
-                        <GuestRoute exact path='/' component={Home} />
+                        <GuestRoute exact  path='/' component={Home} />
                         <GuestRoute exact  path='/login' component={Login} />
                         <GuestRoute exact  path='/register' component={Register} />
                     </Switch>

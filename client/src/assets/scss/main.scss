@@ -1,0 +1,9 @@
+html{
+    body{
+        div#root{
+            div.App{
+                @import './home/header.scss';
+            }
+        }
+    }
+}

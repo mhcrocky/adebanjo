@@ -1,6 +1,7 @@
-import react from 'react';
+import React from 'react';
 
-const Login = () => {
+
+const Login:React.FC = () => {
     return (
         <div className="mgc-login-form">
             login page

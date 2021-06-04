@@ -5,7 +5,7 @@ const initialState = {
  loading: false
 }
 
-export default function (state = initialState, action:any) {
+const userReducer = (state = initialState, action:any) => {
     switch (action.type) {
         case SET_AUTHENTICATED:
             return {
@@ -29,3 +29,5 @@ export default function (state = initialState, action:any) {
             return state;
     }
 }
+
+export default userReducer
